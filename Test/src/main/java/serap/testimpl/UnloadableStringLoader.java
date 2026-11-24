@@ -1,7 +1,5 @@
 package serap.testimpl;
 
-import org.jetbrains.annotations.NotNull;
-import serap.io.ResourceLib;
 import serap.io.loading.loader.Loader;
 import serap.io.loading.loader.context.RuntimeResourceLoaderContext;
 
@@ -15,7 +13,7 @@ public class UnloadableStringLoader extends Loader<UnloadableString, RuntimeReso
     }
 
     @Override
-    protected UnloadableString loadFromStream(@NotNull InputStream stream) {
+    protected UnloadableString loadFromStream( InputStream stream) {
         try {
             String res = new String(stream.readAllBytes(), StandardCharsets.UTF_8);
             return new UnloadableString(res);

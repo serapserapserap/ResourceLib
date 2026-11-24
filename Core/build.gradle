@@ -6,7 +6,7 @@ version = 'u1'
 
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.40'
-    api 'org.jetbrains:annotations:26.1.0'
+    compileOnly 'org.jetbrains:annotations:26.1.0'
     annotationProcessor 'org.projectlombok:lombok:1.18.40'
     api 'com.github.serapserapserap:core:v1.1.3'
 }

@@ -1,6 +1,5 @@
 package serap.testimpl;
 
-import org.jetbrains.annotations.NotNull;
 import serap.core.registry.Registry;
 import serap.io.loading.loader.Loader;
 import serap.io.loading.loader.context.ResourceLoaderContext;
@@ -15,7 +14,7 @@ public class SpungusLoader extends Loader<Spungus, ResourceLoaderContext<Spungus
     }
 
     @Override
-    protected Spungus loadFromStream(@NotNull InputStream stream) {
+    protected Spungus loadFromStream(InputStream stream) {
         try {
             String res = new String(stream.readAllBytes(), StandardCharsets.UTF_8);
             return new Spungus(res);
