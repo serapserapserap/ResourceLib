@@ -1,0 +1,5 @@
+rootProject.name = 'ResourceLib'
+include 'Annotations'
+include 'Core'
+include 'AnnotationProcessor'
+include 'Test'

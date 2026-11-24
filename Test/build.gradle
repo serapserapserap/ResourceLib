@@ -1,0 +1,7 @@
+version = "u1"
+
+dependencies {
+    implementation project(":Core")
+    implementation project(":Annotations")
+    annotationProcessor project(":AnnotationProcessor")
+}
