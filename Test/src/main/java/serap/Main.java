@@ -44,9 +44,11 @@ public class Main {
     static void main() {
         Consumer<Object> out = IO::println;
         ResourceLib.addLoggingOutput(out, out, out, out);
+
+        //make the stupid static block run
+        new TestUtils();
+
         //initializer is automatically generated according to the annotations
-        TestUtils.RELOADABLE_STRING_REGISTRY.lock();
-        TestUtils.SPUNGUS_REGISTRY.lock();
         resourceManager = ExampleResourceInitializer.initialize();
         resourceManager.addBaseSource(new ClasspathResourceSource(Main.class.getClassLoader()));
         resourceManager.initiallyLoadResources();
@@ -92,5 +94,8 @@ public class Main {
 
             resourceManager.pollResourceLoading();
         }
+        //cleanup after we're done with it
+        resourceManager.cleanup();
+        ResourceLib.info("main execution finished");
     }
 }

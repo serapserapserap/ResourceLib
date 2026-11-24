@@ -37,4 +37,6 @@ public interface MergingThreadManager {
      * if it is reloading or initializing
      */
     boolean isStable();
+
+    void cleanup();
 }

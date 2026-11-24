@@ -243,4 +243,8 @@ public class ResourceManager {
     private @NotNull ResourceSource rebuildResourceSourceFrom(ResourceStack stack) {
          return new StackedResourceSource(stack);
     }
+
+    public void cleanup() {
+        this.threadManager.cleanup();
+    }
 }

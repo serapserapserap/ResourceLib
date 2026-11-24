@@ -197,6 +197,11 @@ public class IOThreadHandler implements MergingThreadManager {
         return this.futures.size() == this.getTotalExpectedSubmissions();
     }
 
+    @Override
+    public void cleanup() {
+        this.executorService.close();
+    }
+
 
     private static class ResourceMerger<T> {
         ResourceIdentifier identifier;

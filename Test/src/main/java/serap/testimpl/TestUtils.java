@@ -17,7 +17,6 @@ public class TestUtils {
     public static final Registry<Spungus> SPUNGUS_REGISTRY = Registry.newRegistry("spungus");
 
     static {
-        ResourceType.REGISTRY.lock();
         UnloadableStringLoader stringOpener = new UnloadableStringLoader(new RuntimeResourceLoaderContext<>(RELOADABLE_STRING_REGISTRY));
         RELOADABLE_STRING_RESOURCE_TYPE = ResourceType.registerType(new ResourceType<>(
                 RegistryIdentifier.simpleIdOf("reloadable_strings"),
