@@ -105,7 +105,7 @@ dependencies {
 ```
 ### Using In Your Project 
 
-How to get started with ResourceLib vary a bit depending on if you're using the annotations & annotation processor or not
+How to get started with ResourceLib will vary a bit depending on if you're using the annotations & annotation processor or not
 
 #### Adding a logging output
 This is optional but recommended, as otherwise you will get no logging feedback from the library. You can do this by simply running
@@ -225,7 +225,7 @@ public class Main {
 ```
 
 a slight drawback is that when you first setup ResourceLib, the initializer won't exist. To fix this you run
-`./gradlew jar` if using gradle, or run `compile` if you're using maven, from there on it should always exist.
+`./gradlew jar` if using gradle, or run `compile` if you're using maven, from then on it should always exist.
 
 #### Finally, Initialization And Use
 
