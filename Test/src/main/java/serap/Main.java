@@ -19,7 +19,6 @@ import java.util.function.Consumer;
 @ProjectNamespace("example")
 @EnsureLoaded("different/file3.spungus")
 public class Main {
-
     private static ResourceManager resourceManager;
 
     @Asset(
@@ -49,6 +48,7 @@ public class Main {
         new TestUtils();
 
         //initializer is automatically generated according to the annotations
+        //its name will be the project namespace with "ResourceInitializer" after it
         resourceManager = ExampleResourceInitializer.initialize();
         resourceManager.addBaseSource(new ClasspathResourceSource(Main.class.getClassLoader()));
         resourceManager.initiallyLoadResources();
